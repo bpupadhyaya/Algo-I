@@ -42,6 +42,7 @@ public class Inversion {
         }
 
         long inversionCount = 0;
+        double t1 = System.currentTimeMillis();
         for(int i = 0; i < count; ++i) {
             for(int j = i+1; j < count; j++) {
                 if(intArray[i] > intArray[j]) {
@@ -49,8 +50,10 @@ public class Inversion {
                 }
             }
         }
+        double t2 = System.currentTimeMillis();
 
         System.out.println("Inversion count: "+ inversionCount);
+        System.out.println("Total time taken: "+ (t2 - t1) + " milliseconds" );
 
         br.close();
     }
